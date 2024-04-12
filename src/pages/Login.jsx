@@ -7,9 +7,9 @@ import { DiGithubBadge } from "react-icons/di";
 const Login = () => {
     return (
         <div>
-            <div className="w-11/12 mx-auto hero min-h-screen bg-base-200 rounded-3xl">
-  <div className="hero-content flex-col">
-    <div className="text-center mb-5 lg:text-left">
+            <div className="w-11/12 mx-auto mt-10  min-h-screen bg-base-200 rounded-3xl">
+  <div className="flex flex-col gap-10 items-center justify-center">
+    <div className="text-center mt-12 lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
     </div>
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
