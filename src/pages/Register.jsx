@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
-        <div className='w-11/12 mx-auto mt-10'>
+        <div className='w-11/12 mx-auto mt-10 animate__animated animate__jello'>
 
             <div className="hero min-h-screen bg-base-200 rounded-3xl">
   <div className="hero-content flex-col">
-    <div className="text-center mb-5 mt-8 lg:text-left">
+    <div className="text-center mb-5 mt-10 lg:text-left">
       <h1 className="text-5xl font-bold">Create Account</h1>
     </div>
     <div className="card w-full shadow-2xl bg-base-100">
