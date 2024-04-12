@@ -1,0 +1,70 @@
+[
+    {
+      "id": 1,
+      "title": "Modern Apartment",
+      "description": "Stunning modern apartment with panoramic views.",
+      "image": "https://i.ibb.co/V31CTQ1/pexels-expect-best-323780.jpg",
+      "price": "$350,000",
+      "status": "On Sale",
+      "area": "1200 sq ft",
+      "location": "New York",
+      "facilities": ["Swimming Pool", "Gym", "Parking"]
+    },
+    {
+      "id": 2,
+      "title": "Luxury Villa",
+      "description": "Exquisite luxury villa with oceanfront access.",
+      "image": "https://i.ibb.co/yRpNMG9/pexels-max-vakhtbovycn-5997993.jpg",
+      "price": "$1,200,000",
+      "status": "On Sale",
+      "area": "5000 sq ft",
+      "location": "Los Angeles",
+      "facilities": ["Spa", "Home Theater", "Garden"]
+    },
+    {
+      "id": 3,
+      "title": "Cosy Townhouse",
+      "description": "Charming townhouse in a quiet neighborhood.",
+      "image": "https://i.ibb.co/TgR66wh/pexels-lindsey-flynn-18656403.jpg",
+      "price": "$250,000",
+      "status": "On Sale",
+      "area": "1500 sq ft",
+      "location": "Chicago",
+      "facilities": ["Fireplace", "Garage", "Backyard"]
+    },
+    {
+      "id": 4,
+      "title": "Rural Farmhouse",
+      "description": "Idyllic farmhouse surrounded by rolling hills.",
+      "image": "https://i.ibb.co/5xB6VtD/pexels-pixabay-314937.jpg",
+      "price": "$500,000",
+      "status": "On Sale",
+      "area": "10 acres",
+      "location": "Montana",
+      "facilities": ["Barn", "Pond", "Stables"]
+    },
+    {
+      "id": 5,
+      "title": "Penthouse Suite",
+      "description": "Luxurious penthouse with breathtaking city views.",
+      "image": "https://i.ibb.co/7RpsfH9/pexels-max-vakhtbovycn-6394571.jpg",
+      "price": "$2,500,000",
+      "status": "On Sale",
+      "area": "3000 sq ft",
+      "location": "Miami",
+      "facilities": ["Infinity Pool", "Sauna", "Terrace"]
+    },
+    {
+      "id": 6,
+      "title": "Mountain Retreat",
+      "description": "Secluded mountain retreat perfect for nature lovers.",
+      "image": "https://i.ibb.co/XLvqdkL/pexels-olga-lioncat-7245104.jpg",
+      "price": "$750,000",
+      "status": "On Sale",
+      "area": "2000 sq ft",
+      "location": "Colorado",
+      "facilities": ["Hot Tub", "Hiking Trails", "Deck"]
+    }
+    
+  ]
+  
