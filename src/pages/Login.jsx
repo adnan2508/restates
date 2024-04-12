@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FcGoogle } from "react-icons/fc";
+import { DiGithubBadge } from "react-icons/di";
 
 
 const Login = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="w-11/12 mx-auto hero min-h-screen bg-base-200 rounded-3xl">
   <div className="hero-content flex-col">
     <div className="text-center mb-5 lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
@@ -24,11 +26,21 @@ const Login = () => {
           </label>
           <input type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
-            <p  className="label-text-alt ">Don't have an account? <Link  to='/register'>Register</Link></p>
+            <p  className="label-text-alt text-sm">Don't have an account? <Link  to='/register' className='text-blue-700 font-semibold'>Register</Link></p>
           </label>
         </div>
-        <h2>Login with Google</h2>
-        <h2>Login with Github</h2>
+        
+        <div className='flex border-2 rounded-lg p-2 items-center justify-center'>
+        <p>Login with</p>
+        <FcGoogle size={30}/>
+        </div>
+        <div className='flex border-2 rounded-lg p-2 items-center justify-center'>
+        <p>Login with</p>
+        <DiGithubBadge size={35}/>
+        </div>
+        
+         
+
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
