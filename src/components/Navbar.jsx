@@ -26,9 +26,10 @@ const Navbar = () => {
     <li><Link to='/about'>About</Link></li>
     </ul>
   </div>
+
   <div className="navbar-end">
   {
-    user?.email?
+    user?
     <>
     <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-8">
