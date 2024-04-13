@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "Modern Apartment",
-      "description": "Stunning modern apartment with panoramic views.",
+      "description": "Imagine a sleek and stylish living space in a multi-unit building. Large windows offer panoramic views of the city, and the interior boasts clean lines, open floor plans, and high-end finishes. Stainless steel appliances and modern fixtures create a chic atmosphere, perfect for urban professionals or those who enjoy a contemporary lifestyle.",
       "image": "https://i.ibb.co/V31CTQ1/pexels-expect-best-323780.jpg",
       "price": "$350,000",
       "status": "On Sale",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Luxury Villa",
-      "description": "Exquisite luxury villa with oceanfront access.",
+      "description": "Picture a sprawling estate, often in a secluded location. The villa itself is grand and spacious, with multiple bedrooms, bathrooms, and luxurious amenities.  A private pool, landscaped gardens, and stunning views are all features you might expect.  This is a property designed for grand entertaining and ultimate comfort.",
       "image": "https://i.ibb.co/yRpNMG9/pexels-max-vakhtbovycn-5997993.jpg",
       "price": "$1,200,000",
       "status": "On Sale",
@@ -24,7 +24,7 @@
     {
       "id": 3,
       "title": "Cosy Townhouse",
-      "description": "Charming townhouse in a quiet neighborhood.",
+      "description": "This residence offers a charming and intimate feel. Sharing walls with neighboring units, townhouses typically have multiple floors and a more vertical layout.  Think exposed brick, fireplaces, and a front patio or stoop. Perfect for small families or those who crave a sense of community while still enjoying some privacy.",
       "image": "https://i.ibb.co/TgR66wh/pexels-lindsey-flynn-18656403.jpg",
       "price": "$250,000",
       "status": "On Sale",
@@ -35,7 +35,7 @@
     {
       "id": 4,
       "title": "Rural Farmhouse",
-      "description": "Idyllic farmhouse surrounded by rolling hills.",
+      "description": "Immerse yourself in a rustic and agricultural setting.  A farmhouse is a functional living space, often with a large porch and outbuildings like barns or sheds.  The focus is on connection to nature and a simpler way of life.  Expect hardwood floors, exposed beams, and a focus on practicality.",
       "image": "https://i.ibb.co/5xB6VtD/pexels-pixabay-314937.jpg",
       "price": "$500,000",
       "status": "On Sale",
@@ -46,7 +46,7 @@
     {
       "id": 5,
       "title": "Penthouse Suite",
-      "description": "Luxurious penthouse with breathtaking city views.",
+      "description": "Experience the ultimate city living at the top of a high-rise building. Penthouses offer breathtaking panoramic views and expansive living areas.  Floor-to-ceiling windows showcase the cityscape, and high-end finishes throughout create a sense of opulence.  Large private terraces are often a feature, allowing for outdoor entertaining with a million-dollar view.",
       "image": "https://i.ibb.co/7RpsfH9/pexels-max-vakhtbovycn-6394571.jpg",
       "price": "$2,500,000",
       "status": "On Sale",
@@ -57,7 +57,7 @@
     {
       "id": 6,
       "title": "Mountain Retreat",
-      "description": "Secluded mountain retreat perfect for nature lovers.",
+      "description": "Escape the hustle and bustle and find serenity in a cabin or lodge nestled amidst mountains.  Think natural wood finishes, a cozy fireplace, and large windows framing breathtaking vistas.  This property is ideal for those who love outdoor activities and the peacefulness of nature.  The focus here is on relaxation and enjoying the beauty of the surrounding landscape.",
       "image": "https://i.ibb.co/XLvqdkL/pexels-olga-lioncat-7245104.jpg",
       "price": "$750,000",
       "status": "On Sale",

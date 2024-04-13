@@ -7,7 +7,7 @@ const NotFound = () => {
             <h1 className='text-9xl font-extrabold mt-10'>404</h1>
             <p className='text-center text-9xl font-semibold'>Page not found!</p>
             <Link to='/'>
-            <button className='btn btn-primary'>Go to Home</button>
+            <button className='btn btn-primary text-white'>Go to Home</button>
             </Link>
         </div>
     );
