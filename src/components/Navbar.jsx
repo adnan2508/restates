@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
+  const {logout, user} = useAuth();
+  console.log(user);
     return (
         <div>
             <div className="navbar bg-base-100 w-11/12 mx-auto animate__animated animate__fadeInLeft">
@@ -24,7 +27,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <Link to='/login' className="btn btn-success text-white px-8">Login</Link>
+  {
+    user?.email?
+    <>
+    <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-8">
+        <div className="w-10 rounded-full">
+          <img alt="User Image" src={user.photoURL} />
+        </div>
+      </div>
+    </div>
+    
+    <button onClick={logout} className="btn btn-error text-white px-8">Signout</button>
+    </>
+    :
+    <Link to='/login' className="btn btn-success text-white px-8">Login</Link>
+    
+    }
+
   </div>
     
   </div>

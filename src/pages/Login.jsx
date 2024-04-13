@@ -24,7 +24,7 @@ const Login = () => {
   };
     return (
         <div>
-            <div className="w-11/12 mx-auto mt-10  min-h-screen bg-base-200 rounded-3xl animate__animated animate__jello">
+            <div className="w-11/12 mx-auto mt-10 min-h-screen bg-base-200 rounded-3xl animate__animated animate__jello">
   <div className="flex flex-col gap-10 items-center justify-center p-8">
     <div className="text-center mt-12 lg:text-left">
       <h1 className="text-5xl font-bold">Login Now!</h1>
@@ -49,12 +49,16 @@ const Login = () => {
           </label>
         </div>
         
-        <SocialLogin/>
+       
 
         <div className="form-control mt-6">
           <button className="btn btn-primary text-white">Login</button>
         </div>
       </form>
+      <div className='mb-5'>
+      <SocialLogin/>
+      </div>
+      
     </div>
   </div>
 </div>
