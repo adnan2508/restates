@@ -1,53 +1,98 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-    return (
-        <div className='w-11/12 mx-auto mt-10 animate__animated animate__jello'>
+  const { createUser } = useContext(AuthContext);
+  console.log(createUser);
 
-            <div className="hero min-h-screen bg-base-200 rounded-3xl">
-  <div className="hero-content flex-col">
-    <div className="text-center mb-5 mt-10 lg:text-left">
-      <h1 className="text-5xl font-bold">Create Account</h1>
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    createUser(data.email, data.password);
+  };
+
+  return (
+    <div className="w-11/12 mx-auto mt-10 animate__animated animate__jello">
+      <div className="hero min-h-screen bg-base-200 rounded-3xl">
+        <div className="hero-content flex-col">
+          <div className="text-center mb-5 mt-10 lg:text-left">
+            <h1 className="text-5xl font-bold">Create Account</h1>
+          </div>
+          <div className="card w-full shadow-2xl bg-base-100">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Full Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="input input-bordered"
+                  {...register("fullName", { required: true })}
+                />
+                {errors.fullName && <span className="text-red-600">This field is required</span>}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="input input-bordered"
+                  {...register("email", { required: true })}
+                />
+                {errors.email && <span className="text-red-600">This field is required</span>}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Photo URL"
+                  className="input input-bordered"
+                  {...register("photoUrl", { required: true })}
+                />
+                {errors.photoUrl && <span className="text-red-600">This field is required</span>}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="input input-bordered"
+                  {...register("password", { required: true })}
+                />
+                {errors.password && <span className="text-red-600">This field is required</span>}
+                <label className="label">
+                  <p className="label-text-alt text-sm">
+                    Already have an account?{" "}
+                    <Link to="/login" className="text-blue-700 font-semibold">
+                      Login
+                    </Link>
+                  </p>
+                </label>
+              </div>
+              <div className="form-control mt-6">
+                <button className="btn btn-primary text-white">Create Account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <div className="card w-full shadow-2xl bg-base-100">
-      <form className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
-          <input type="text" placeholder="Name" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="Email" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Photo URL</span>
-          </label>
-          <input type="text" placeholder="Photo URL" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <p  className="label-text-alt text-sm">Already have an account? <Link  to='/login' className='text-blue-700 font-semibold'>Login</Link></p>
-          </label>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn btn-primary">Create Account</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-        </div>
-    );
+  );
 };
 
 export default Register;
