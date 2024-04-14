@@ -32,8 +32,8 @@ const Navbar = () => {
     user?
     <>
     <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
-    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar mr-8">
-        <div className="w-10 rounded-full">
+    <div tabIndex={0} role="button" className="avatar online btn btn-ghost btn-circle mr-8">
+        <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           <img alt="User Image" src={user.photoURL} />
         </div>
       </div>
