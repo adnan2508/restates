@@ -21,15 +21,27 @@ const Navbar = () => {
     <a className="btn btn-ghost text-4xl">ReStates</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    {
+      user?
+      <div>
+      <ul className="menu menu-horizontal px-1">
+    <li><Link to='/'>Home</Link></li>
+    <li><Link to='/about'>About</Link></li>
+    <li><Link to='/updateProfile'>Update Profile</Link></li>
+    <li><Link to='/userProfile'>User Profile</Link></li>
+    </ul>
+      </div>
+      :
+      <ul className="menu menu-horizontal px-1">
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/about'>About</Link></li>
     </ul>
+    }
   </div>
 
   <div className="navbar-end">
   {
-    user?
+    user? 
     <>
     <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
     <div tabIndex={0} role="button" className="avatar online btn btn-ghost btn-circle mr-8">
@@ -38,9 +50,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    
     <button onClick={logout} className="btn btn-error text-white px-8">Signout</button>
-    </>
+    </> 
     :
     <Link to='/login' className="btn btn-success text-white px-8">Login</Link>
     
