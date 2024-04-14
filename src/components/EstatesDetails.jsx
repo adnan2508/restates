@@ -11,7 +11,7 @@ const EstatesDetails = () => {
       <div className="w-11/12 mx-auto mt-20 md:mt-10 animate__animated animate__fadeInDown">
         <div className="card grid grid-cols-1 lg:grid-cols-2 bg-base-100 shadow-xl">
           <figure>
-            <img src={estate.image} alt="estate" className="h-full rounded-3xl"/>
+            <img src={estate.image} alt="estate" className="h-full lg:h-[730px] w-full rounded-3xl"/>
           </figure>
 
           <div className="card-body flex-1">
