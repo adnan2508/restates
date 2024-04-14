@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 
 const EstatesCard = ({estates}) => {
-    console.log(estates);
+    
     return (
         <div>
             <div className="card card-compact bg-base-100 shadow-xl mt-10 animate__animated animate__fadeInDown">
@@ -14,7 +15,9 @@ const EstatesCard = ({estates}) => {
     </div>
     {/* <p>{estates.facilities.map(facility => <li>{facility}</li>)}</p> */}
     <div className="card-actions justify-end">
+      <Link to={`/estates/${estates.id}`}>
       <button className="btn btn-success rounded-xl text-white">View Property</button>
+      </Link>
     </div>
   </div>
 </div>
