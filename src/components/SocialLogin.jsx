@@ -9,7 +9,6 @@ const SocialLogin = () => {
     const {googleLogin, githubLogin} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
     const from = location?.state || '/'
 
     const handleSocialLogin = socialProvider => {

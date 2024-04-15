@@ -1,8 +1,13 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 const About = () => {
   return (
-    <div className="w-11/12 mx-auto mt-10 animate__animated animate__fadeInDown">
+    <div>
+        <Helmet>
+            <title>About</title>
+        </Helmet>
+        <div className="w-11/12 mx-auto mt-10 animate__animated animate__fadeInDown">
       <h2 className="mt-10 text-6xl text-center font-bold">
         ReStates: Your Trusted Partner in Real Estate
       </h2>
@@ -55,6 +60,7 @@ Open communication is paramount. We'll keep you informed every step of the way.<
         </ul>
       </div>
       <p className="text-4xl font-bold text-center mt-2">We look forward to partnering with you!</p>
+    </div>
     </div>
   );
 };

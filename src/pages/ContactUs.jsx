@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const ContactUs = () => {
     return (
         <div>
+            <Helmet>
+                <title>Contact Us</title>
+            </Helmet>
+            
             <div className='w-11/12 mx-auto animate__animated animate__fadeInDown'>
                 <h2 className='text-center text-6xl font-bold mt-10'>Contact Us</h2>
                 <div className='flex justify-center items-center mt-10'>

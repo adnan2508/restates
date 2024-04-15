@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
-  const {logout, user} = useAuth();
+  const {logout, user, getUserInfo } = useAuth();
    console.log(user);
+   
     return (
         <div>
             <div className="navbar bg-base-100 w-11/12 mx-auto animate__animated animate__fadeInLeft">

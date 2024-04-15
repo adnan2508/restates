@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const EstatesDetails = () => {
@@ -8,6 +9,9 @@ const EstatesDetails = () => {
   const estate = estates.find((estate) => estate.id === idInt);
   return (
     <div>
+      <Helmet>
+        <title>{estate.title}</title>
+      </Helmet>
       <div className="w-11/12 mx-auto mt-20 md:mt-10 animate__animated animate__fadeInDown">
         <div className="card grid grid-cols-1 lg:grid-cols-2 bg-base-100 shadow-xl">
           <figure>

@@ -3,12 +3,17 @@ import Banner from '../components/Banner';
 import 'animate.css';
 import { useLoaderData } from 'react-router-dom';
 import EstatesCard from '../components/EstatesCard';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
     const estates = useLoaderData();
     
     return (
+        <>
+        <Helmet>
+            <title>Restates-Home</title>
+        </Helmet>
         <div className='w-11/12 mx-auto mt-20 md:mt-10 animate__animated animate__fadeInDown'>
             <Banner/>
 
@@ -21,6 +26,7 @@ const Home = () => {
             </div>
 
         </div>
+        </>
     );
 };
 

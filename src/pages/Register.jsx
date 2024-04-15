@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser,updateUserProfile } = useAuth();
@@ -27,6 +28,10 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Register</title>
+    </Helmet>
     <div className="w-11/12 mx-auto mt-10 animate__animated animate__jello">
       <div className="hero min-h-screen bg-base-200 rounded-3xl">
         <div className="hero-content flex-col">
@@ -43,9 +48,9 @@ const Register = () => {
                   type="text"
                   placeholder="Full Name"
                   className="input input-bordered"
-                  {...register("fullName", { required: true })}
+                  {...register("name", { required: true })}
                 />
-                {errors.fullName && <span className="text-red-600">This field is required</span>}
+                {errors.name && <span className="text-red-600">This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -99,6 +104,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
