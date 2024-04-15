@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
   const {logout, user} = useAuth();
-  console.log(user);
+   console.log(user);
     return (
         <div>
             <div className="navbar bg-base-100 w-11/12 mx-auto animate__animated animate__fadeInLeft">
@@ -19,6 +19,7 @@ const Navbar = () => {
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
+        <li><Link to='/contactUs'>Contact Us</Link></li>
         <li><Link to='/updateProfile'>Update Profile</Link></li>
         <li><Link to='/userProfile'>User Profile</Link></li>
       </ul>
@@ -39,6 +40,7 @@ const Navbar = () => {
       <ul className="menu menu-horizontal px-1">
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/about'>About</Link></li>
+    <li><Link to='/contactUs'>Contact Us</Link></li>
     <li><Link to='/updateProfile'>Update Profile</Link></li>
     <li><Link to='/userProfile'>User Profile</Link></li>
     </ul>
@@ -58,7 +60,9 @@ const Navbar = () => {
     <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
     <div tabIndex={0} role="button" className="avatar online btn btn-ghost btn-circle mr-8">
         <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-          <img alt="User Image" src={user.photoURL} />
+          <img alt="User Image" src={
+            user?.photoURL || "https://parikhpower.in/wp-content/uploads/sites/7/2017/09/profile-placeholder.png"
+        } />
         </div>
       </div>
     </div>

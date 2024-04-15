@@ -1,20 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser,updateUserProfile } = useAuth();
   console.log(createUser);
 
   const {register, handleSubmit, formState: { errors } } = useForm();
 
+  // Navigation system
+  const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || '/'
+
   const onSubmit = (data) => {
-    const{email, password} = data;
-    createUser(email, password)
-    .then (result =>{
-      console.log(result);
-    })
+    console.log(data);
+    const{email, password, fullName, image} = data;
+
+    // create user and update profile
+    createUser(email, password).then(() => {
+      updateUserProfile(image, fullName).then(()=>{
+          navigate(from);
+      });
+  });
   };
 
   return (
@@ -58,9 +67,9 @@ const Register = () => {
                   type="text"
                   placeholder="Photo URL"
                   className="input input-bordered"
-                  {...register("photoUrl", { required: true })}
+                  {...register("image")}
                 />
-                {errors.photoUrl && <span className="text-red-600">This field is required</span>}
+                
               </div>
               <div className="form-control">
                 <label className="label">
