@@ -60,9 +60,12 @@ const Navbar = () => {
     <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
     <div tabIndex={0} role="button" className="avatar online btn btn-ghost btn-circle mr-8">
         <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <Link to='/userProfile'>
           <img alt="User Image" src={
             user?.photoURL || "https://parikhpower.in/wp-content/uploads/sites/7/2017/09/profile-placeholder.png"
         } />
+          </Link>
+          
         </div>
       </div>
     </div>
