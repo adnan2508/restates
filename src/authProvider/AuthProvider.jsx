@@ -64,13 +64,14 @@ const AuthProvider = ({children}) => {
           return  () => unsubscribe();
     },[])
 
-    const allValues ={
+    const allValues = {
         createUser,
         signInUser,
         googleLogin,
         githubLogin,
         logout,
         user,
+        setUser,
         loading,
         updateUserProfile,
     }

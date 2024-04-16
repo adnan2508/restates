@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
 const Navbar = () => {
-  const {logout, user, getUserInfo } = useAuth();
+  const {logout, user } = useAuth();
    console.log(user);
    
     return (

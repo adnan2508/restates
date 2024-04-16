@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import { Helmet } from "react-helmet";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const { createUser,updateUserProfile } = useAuth();
   console.log(createUser);
 
@@ -20,8 +22,11 @@ const Register = () => {
     const{email, password, fullName, image} = data;
 
     // create user and update profile
-    createUser(email, password).then(() => {
-      updateUserProfile(image, fullName).then(()=>{
+    createUser(email, password)
+    .then((result) => {
+      console.log(result.user)
+      updateUserProfile(image, fullName)
+      .then(()=>{
           navigate(from);
       });
   });
@@ -80,13 +85,18 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
+                <div className="relative">
                 <input
-                  type="password"
+                  type={ showPassword ? "text" :"password"}
                   placeholder="Password"
-                  className="input input-bordered"
+                  className="input input-bordered w-full"
                   {...register("password", { required: true })}
-                />
+                /> <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>{
+                showPassword ? <FaEyeSlash/> : <FaEye/>
+                }</span>
                 {errors.password && <span className="text-red-600">This field is required</span>}
+                </div>
+                
                 <label className="label">
                   <p className="label-text-alt text-sm">
                     Already have an account?{" "}
