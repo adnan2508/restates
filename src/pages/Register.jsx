@@ -19,13 +19,13 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const{email, password, fullName, image} = data;
+    const{email, password, name, image} = data;
 
     // create user and update profile
     createUser(email, password)
     .then((result) => {
       console.log(result.user)
-      updateUserProfile(image, fullName)
+      updateUserProfile(name, image)
       .then(()=>{
           navigate(from);
       });
