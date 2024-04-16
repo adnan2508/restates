@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import useAuth from "../hooks/useAuth";
-import { updateProfile } from "firebase/auth";
+import { updateEmail, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 
 const UpdateProfile = () => {
@@ -21,8 +21,15 @@ const UpdateProfile = () => {
         displayName: name, photoURL: photoURL
       }).then(() => {
         // Profile updated!
-        // ...
+        
       });
+
+    //   updateEmail(auth.currentUser, {
+    //     email: email,
+    // }).then(() => {
+    //     // Email updated!
+    //   });
+      
   };
 
 
@@ -65,7 +72,7 @@ const UpdateProfile = () => {
             name="email"
             className="input input-bordered w-full mx-auto"
           />
-          <div className="form-control mt-6">
+          <div className="form-control mt-10 mb-20">
             <button className="btn btn-primary text-white">Save Account</button>
           </div>
         </form>
