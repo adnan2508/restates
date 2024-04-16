@@ -27,7 +27,7 @@
       "description": "This residence offers a charming and intimate feel. Sharing walls with neighboring units, townhouses typically have multiple floors and a more vertical layout.  Think exposed brick, fireplaces, and a front patio or stoop. Perfect for small families or those who crave a sense of community while still enjoying some privacy.",
       "image": "https://i.ibb.co/TgR66wh/pexels-lindsey-flynn-18656403.jpg",
       "price": "$250,000",
-      "status": "On Sale",
+      "status": "On Rent",
       "area": "1500 sq ft",
       "location": "Chicago",
       "facilities": ["Fireplace", "Garage", "Backyard"]
@@ -49,7 +49,7 @@
       "description": "Experience the ultimate city living at the top of a high-rise building. Penthouses offer breathtaking panoramic views and expansive living areas.  Floor-to-ceiling windows showcase the cityscape, and high-end finishes throughout create a sense of opulence.  Large private terraces are often a feature, allowing for outdoor entertaining with a million-dollar view.",
       "image": "https://i.ibb.co/7RpsfH9/pexels-max-vakhtbovycn-6394571.jpg",
       "price": "$2,500,000",
-      "status": "On Sale",
+      "status": "On Rent",
       "area": "3000 sq ft",
       "location": "Miami",
       "facilities": ["Infinity Pool", "Sauna", "Terrace"]

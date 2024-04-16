@@ -55,7 +55,7 @@ const Register = () => {
                   className="input input-bordered"
                   {...register("name", { required: true })}
                 />
-                {errors.name && <span className="text-red-600">This field is required</span>}
+                {errors.name && <span className="text-red-600">Full Name is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -67,7 +67,7 @@ const Register = () => {
                   className="input input-bordered"
                   {...register("email", { required: true })}
                 />
-                {errors.email && <span className="text-red-600">This field is required</span>}
+                {errors.email && <span className="text-red-600">Email is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -86,15 +86,19 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <div className="relative">
+               
                 <input
                   type={ showPassword ? "text" :"password"}
                   placeholder="Password"
                   className="input input-bordered w-full"
-                  {...register("password", { required: true })}
+                  {...register("password", { required: true, pattern: {
+                    value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                    message: "Password must be at least 6 characters long and contain at least one uppercase letter and one lowercase letter."
+                  } })}
                 /> <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>{
                 showPassword ? <FaEyeSlash/> : <FaEye/>
                 }</span>
-                {errors.password && <span className="text-red-600">This field is required</span>}
+                {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                 </div>
                 
                 <label className="label">

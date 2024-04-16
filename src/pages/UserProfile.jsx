@@ -24,6 +24,7 @@ const UserProfile = () => {
 <div className='flex flex-col justify-start items-center mt-10'>
 <p className='text-lg font-medium'>User Name: {user.displayName}</p>
 <p className='text-lg font-medium'>User Email: {user.email}</p>
+<p className='text-lg font-medium'>User Photo: {user.photoURL}</p>
 </div>
 
 <div className='text-center mt-28'>
