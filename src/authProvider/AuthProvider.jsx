@@ -24,7 +24,6 @@ const AuthProvider = ({children}) => {
             displayName: name, 
             photoURL: image,
           })
-          
     }
 
     // Sign in user

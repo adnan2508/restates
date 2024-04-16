@@ -9,6 +9,7 @@ import EstatesDetails from "../components/EstatesDetails";
 import UserProfile from "../pages/UserProfile";
 import PrivateRoute from "../layouts/PrivateRoute";
 import ContactUs from "../pages/ContactUs";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,12 @@ const router = createBrowserRouter([
             path: "/userProfile",
             element: <PrivateRoute>
               <UserProfile/>
+            </PrivateRoute>,
+        },
+        {
+            path: "/updateProfile",
+            element: <PrivateRoute>
+              <UpdateProfile/>
             </PrivateRoute>,
         },
         {
