@@ -34,7 +34,7 @@ const UpdateProfile = () => {
 
 
   return (
-    <div>
+    <div className="animate__animated animate__fadeInDown">
       <Helmet>
         <title>Update Profile</title>
       </Helmet>
