@@ -138,7 +138,18 @@ const Register = () => {
                     </p>
                   </label>
                 </div>
-                <div className="form-control mt-6">
+               <div className="flex gap-2">
+               <input 
+               type="checkbox" 
+               name="terms" 
+               id="terms" 
+               {...register("terms", { required: true })}/>
+                <label htmlFor="terms">Accept our Terms and Conditions</label>
+               </div>
+               {errors.terms && (
+                    <span className="text-red-600 text-center">Please Accept our Terms And Conditions</span>
+                  )}
+                <div className="form-control mt-4">
                   <button className="btn btn-primary text-white">
                     Create Account
                   </button>
