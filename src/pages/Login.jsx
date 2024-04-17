@@ -41,7 +41,7 @@ const Login = () => {
         <title>Login</title>
       </Helmet>
 
-      <div className="w-11/12 mx-auto mt-10 min-h-screen bg-base-200 rounded-3xl animate__animated animate__jello">
+      <div className="w-11/12 mx-auto mt-20 md:mt-10 min-h-screen bg-base-200 rounded-3xl animate__animated animate__jello">
         <div className="flex flex-col gap-10 items-center justify-center p-8">
           <div className="text-center mt-12 lg:text-left">
             <h1 className="text-5xl font-bold">Login Now!</h1>

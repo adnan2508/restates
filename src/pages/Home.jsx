@@ -14,7 +14,7 @@ const Home = () => {
         <Helmet>
             <title>Restates-Home</title>
         </Helmet>
-        <div className='w-11/12 mx-auto mt-20 md:mt-10 animate__animated animate__fadeInDown'>
+        <div className='w-11/12 mx-auto mt-40 md:mt-10 animate__animated animate__fadeInDown'>
             <Banner/>
 
             <h2 className='mt-10 text-center text-3xl font-bold animate-animated animate__backInDown'>Featured Estates</h2>

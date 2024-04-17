@@ -13,7 +13,7 @@ const UserProfile = () => {
             </Helmet>
             
             <div className='animate__animated animate__fadeInDown'>
-            <div className='w-11/12 mx-auto mt-20 lg:mt-10'>
+            <div className='w-11/12 mx-auto mt-40 md:mt-10'>
             <h2 className='text-center text-5xl font-bold mb-10'>User Profile</h2>
             <div className="avatar flex justify-center items-center">
   <div className="w-36 rounded-full">

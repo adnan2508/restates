@@ -51,7 +51,7 @@ const Register = () => {
         <title>Register</title>
       </Helmet>
      
-      <div className="w-11/12 mx-auto mt-10 animate__animated animate__jello">
+      <div className="w-11/12 mx-auto mt-20 md:mt-10 animate__animated animate__jello">
         <div className="hero min-h-screen bg-base-200 rounded-3xl">
           <div className="hero-content flex-col">
             <div className="text-center mb-5 mt-10 lg:text-left">

@@ -7,7 +7,7 @@ const About = () => {
         <Helmet>
             <title>About</title>
         </Helmet>
-        <div className="w-11/12 mx-auto mt-10 animate__animated animate__fadeInDown">
+        <div className="w-11/12 mx-auto mt-40 md:mt-10 animate__animated animate__fadeInDown">
       <h2 className="mt-10 text-6xl text-center font-bold">
         ReStates: Your Trusted Partner in Real Estate
       </h2>

@@ -39,7 +39,7 @@ const UpdateProfile = () => {
         <title>Update Profile</title>
       </Helmet>
 
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto mt-40 md:mt-10">
         <h2 className="text-center text-5xl font-bold mt-10">Update Profile</h2>
 
         <form onSubmit={handleSubmit}>
