@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
@@ -6,6 +6,8 @@ import SocialLogin from "../components/SocialLogin";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
+  const [loginError, setLoginError] = useState('');
+  const [success, setSuccess] = useState('');
   const { signInUser } = useAuth();
 
   const {
@@ -24,9 +26,14 @@ const Login = () => {
 
     signInUser(email, password).then((result) => {
       if (result.user) {
+        setSuccess('User Logged in successfully!')
         navigate(from);
       }
-    });
+    })
+    .catch(error => {
+      setLoginError("Oops! Invalid Email or Password");
+    })
+    ;
   };
   return (
     <div>
@@ -80,10 +87,22 @@ const Login = () => {
                 </label>
               </div>
 
-              <div className="form-control mt-6">
+              <div className="form-control mt-3 mb-1">
                 <button className="btn btn-primary text-white">Login</button>
               </div>
             </form>
+            <div className="mb-2">
+            {
+                loginError && <div className="flex justify-center items-center mb-2 mt-1">
+                <p className="text-red-700 text-lg font-medium text-center">{loginError}</p>
+              </div>
+              }
+              {
+                success && <div className="flex justify-center items-center mb-2">
+                  <p className="text-green-700 text-lg font-medium text-center">{success}</p>
+                </div>
+              }
+            </div>
             <div className="mb-5">
               <SocialLogin />
             </div>

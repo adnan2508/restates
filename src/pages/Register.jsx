@@ -157,7 +157,7 @@ const Register = () => {
               </form>
               {
                 registerError && <div className="flex justify-center items-center mb-2">
-                <p className="text-red-700 text-lg font-medium text-center">{success}</p>
+                <p className="text-red-700 text-lg font-medium text-center">{registerError}</p>
               </div>
               }
               {
